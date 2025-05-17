@@ -1,0 +1,78 @@
+{
+    "collections": [
+      {
+        "id": 1,
+        "total": 1200,
+        "growth": 2.6,
+        "chart": [
+          { "date": "1 Sep", "value": 400 },
+          { "date": "2 Sep", "value": 420 },
+          { "date": "3 Sep", "value": 430 },
+          { "date": "4 Sep", "value": 450 },
+          { "date": "5 Sep", "value": 470 },
+          { "date": "6 Sep", "value": 480 },
+          { "date": "7 Sep", "value": 600 }
+        ]
+      }
+    ],
+    "transactions": [
+  {
+    "id": 1,
+    "total": 39,
+    "growth": -3.2,
+    "chart": [
+      { "date": "1 Sep", "value": 30 },
+      { "date": "2 Sep", "value": 32 },
+      { "date": "3 Sep", "value": 34 },
+      { "date": "4 Sep", "value": 36 },
+      { "date": "5 Sep", "value": 33 },
+      { "date": "6 Sep", "value": 31 },
+      { "date": "7 Sep", "value": 39 }
+    ]
+  }
+],
+"payout": [
+  {
+    "id": 1,
+    "amount": 1600,
+    "date": "12 Sept 2021",
+    "breakdown": [
+      { "date": "9 September 2021", "amount": 1000 },
+      { "date": "10 September 2021", "amount": 500 },
+      { "date": "11 September 2021", "amount": 100 }
+    ]
+  }
+],
+"payouts": [
+  {
+    "id": 1,
+    "total": 25000,
+    "growth": 5.6,
+    "chart": [
+      { "date": "1 Sep", "value": 30 },
+      { "date": "2 Sep", "value": 31 },
+      { "date": "3 Sep", "value": 33 },
+      { "date": "4 Sep", "value": 35 },
+      { "date": "5 Sep", "value": 38 },
+      { "date": "6 Sep", "value": 42 },
+      { "date": "7 Sep", "value": 50 }
+    ]
+  }
+],
+    "collectionsByMethod": [
+      { "id": 1, "method": "Online Banking", "value": 40, "amount": 9900 },
+      { "id": 2, "method": "Cards", "value": 30, "amount": 7230 },
+      { "id": 3, "method": "E-Wallet", "value": 30, "amount": 9000 }
+    ],
+    "topCollections": [
+      { "id": 1, "label": "TUITION CENTER A (MONTHLY)", "amount": 10000, "percent": 45 },
+      { "id": 2, "label": "SHREDDER2U.COM.MY", "amount": 7500, "percent": 15 },
+      { "id": 3, "label": "EZ BOUTIQUE", "amount": 4000, "percent": 7 },
+      { "id": 4, "label": "BOOKSTORE SHOPIFY", "amount": 3000, "percent": 5 },
+      { "id": 5, "label": "MARKETING WITH JOY", "amount": 2500, "percent": 4 }
+    ],
+    "activevsinactive": [
+      { "id": 1, "active": 5, "inactive": 12 }
+    ]
+  }
+  
