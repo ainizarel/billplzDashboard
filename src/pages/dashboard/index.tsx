@@ -78,8 +78,8 @@ export default function Dashboard() {
         setPayout(data.payout[0]);
         setPayouts(data.payouts[0]);
         setTopCollections(data.topCollections);
-        setActiveStats(data.activeVsInactive[0]);
-        setPaymentMethods(data.collectionsByMethod);
+        setActiveStats(data.activevsinactive[0]);
+        setPaymentMethods(data.collectionsByMethod);         
       });
   }, []);
   
