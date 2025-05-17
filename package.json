@@ -2,15 +2,17 @@
   "name": "billplz-dashboard",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ainizarel.github.io/billplzDashboard",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --no-lint",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@iconify/react": "^6.0.0",
     "chart.js": "^4.4.9",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.511.0",
     "next": "15.3.2",
     "primeicons": "^7.0.0",
