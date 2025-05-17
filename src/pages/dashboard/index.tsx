@@ -42,8 +42,6 @@ type ActiveStats = { id: number; active: number; inactive: number };
 type PaymentMethod = { id: number; method: string; value: number; amount: number };
 
 
-
-
 export default function Dashboard() {
   const [showCurrentMonth, setShowCurrentMonth] = useState(true);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -71,45 +69,20 @@ export default function Dashboard() {
     setShowDropdown(false);
     // Optional: Trigger filter or API fetch here
   };
-
   useEffect(() => {
-    // Card 1 - Total Collections
-    fetch("http://localhost:3001/collections")
+    fetch("/db.json")
       .then(res => res.json())
-      .then(data => setCollections(data[0]));
-  
-    // Card 2 - Total Transactions
-    fetch("http://localhost:3001/transactions")
-      .then(res => res.json())
-      .then(data => setTransactions(data[0]));
-  
-    // Card 3 - Upcoming FPX Payout
-    fetch("http://localhost:3001/payout")
-      .then(res => res.json())
-      .then(data => setPayout(data[0]));
-  
-    // Card 4 - Total Payouts
-    fetch("http://localhost:3001/payouts")
-      .then(res => res.json())
-      .then(data => setPayouts(data[0]));
-  
-    // Card 5 - Top 5 Performing Collections
-    fetch("http://localhost:3001/topCollections")
-      .then(res => res.json())
-      .then(data => setTopCollections(data));
-  
-    // Card 6 - Active vs Inactive
-    fetch("http://localhost:3001/activevsinactive")
-      .then(res => res.json())
-      .then(data => setActiveStats(data[0]));
-  
-    // Card 7 - Collections by Payment Methods
-    fetch("http://localhost:3001/collectionsByMethod")
-      .then(res => res.json())
-      .then(data => setPaymentMethods(data));
+      .then(data => {
+        setCollections(data.collections[0]);
+        setTransactions(data.transactions[0]);
+        setPayout(data.payout[0]);
+        setPayouts(data.payouts[0]);
+        setTopCollections(data.topCollections);
+        setActiveStats(data.activeVsInactive[0]);
+        setPaymentMethods(data.collectionsByMethod);
+      });
   }, []);
   
-
   return (
     <Layout>
       <h1 className="text-xl font-semibold mb-4">Overview dashboard</h1>
